@@ -54,7 +54,7 @@ FD.add({
             <label class="rng"><span>Key <output id="kO"></output></span><input type="range" id="key" min="1" max="25" value="7"></label>
           </div>
           <div class="sim-box">
-            <svg viewBox="0 0 560 150" aria-label="An encrypted message is intercepted on the network">
+            <svg viewBox="0 0 584 150" aria-label="An encrypted message is intercepted on the network">
               <g transform="translate(10 40)">${FD.dv.laptop(0, 0)}</g><text class="svg-sm" x="40" y="105">sender</text>
               <g transform="translate(490 40)">${FD.dv.laptop(0, 0)}</g><text class="svg-sm" x="520" y="105">receiver (has the key)</text>
               <line class="wire" x1="75" y1="62" x2="485" y2="62"/>
@@ -94,6 +94,7 @@ FD.add({
         if (dead || id !== runId) return;
         const from = t.in ? 70 : 450, to = t.in ? 450 : 70, y = 100;
         $('#pkT').textContent = t.l;
+        const pw = Math.max(116, $('#pkT').getComputedTextLength() + 22); pk.querySelector('rect').setAttribute('width', pw); pk.querySelector('rect').setAttribute('x', -pw / 2);
         pk.setAttribute('opacity', 1); pk.classList.remove('ok', 'no');
         await FD.tween(700, (k) => { if (id === runId) at(from + (255 - from) * k * .85, y); });
         if (dead || id !== runId) return;

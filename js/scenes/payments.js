@@ -25,7 +25,7 @@ FD.add({
         </div>
 
         <div data-panel="intro" class="sim">
-          <div class="two-col">
+          <div class="two-col py-two">
             <div class="sim-box py-flow">
               <div class="py-node">🧑‍💻<small>buyer</small></div><span class="py-arr" data-zone="net">💳 → → →</span><div class="py-node">🗄️<small>computer that processes the payment</small></div><span class="py-arr">✓ → →</span><div class="py-node">🏪<small>shop</small></div>
             </div>
